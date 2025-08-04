@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="Nav-Bar">
+      <h2>Tasks & Timer</h2>
+      <ul style="list-style: none">
+        <a href="/pages/Timer.html">Timer</a>
+        <a> </a>
+        <a> </a>
+        <a href="/pages/Tasks.html">Tasks</a>
+      </ul>
+    </div>
+    </div>
+    <div class="form-area">
+      <form class="form-element" id="task-form" name="add-task-form">
+        <label  for="task-name">
+          Task Name: 
+          <input type="text" id="task-name" required>
+        </label>
+        <br/>
+        <label for="task-due">
+          Due Date (MM-DD-YYYY): 
+          <input type="date" id="task-due" required>
+        </label>
+        <br/>
+        <label for="tasks-due-time">
+          Due Time: 
+          <input type="time" id="task-due-time" >
+        </label>
+        <br/>
+        <label for="task-description">
+          Description: 
+          <textarea name="task-short-comment" form="task-form"></textarea>
+        </label>
+        <br/>
+        <label for="browser">Choose your Priority:</label>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+          <option value="High">
+          <option value="Medium">
+          <option value="Low">
+          <option value="None">
+        </datalist>
+        <br/>
+        </label>
+        <br/>
+        <label for="submit-btn">
+          <input type="submit" id="submit-btn" value="Add Task" >
+        </label>
+      </form>
+      
+    </div>
+    <!-- add task button -->
+  </body>
+  <script src="/src/Tasks.js"></script>
+</html>
