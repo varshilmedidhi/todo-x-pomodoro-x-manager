@@ -3,60 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Tasks & Timer</title>
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <div class="Nav-Bar">
+    <!-- Navigation -->
+    <nav class="navbar">
       <h2>Tasks & Timer</h2>
-      <ul style="list-style: none">
-        <a href="/pages/Timer.html">Timer</a>
-        <a> </a>
-        <a> </a>
-        <a href="/pages/Tasks.html">Tasks</a>
+      <ul>
+        <li><a href="/pages/Timer.html">Timer</a></li>
+        <li><a href="/pages/Tasks.html">Tasks</a></li>
       </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Toggle Button -->
+      <button id="toggleForm" class="toggle-btn">Add New Task</button>
+
+      <!-- Task Form -->
+      <div id="taskForm" class="task-form">
+        <h3>Add New Task</h3>
+        <form id="addTaskForm">
+          <div class="form-group">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="taskDate">Due Date:</label>
+            <input type="date" id="taskDate" required />
+          </div>
+
+          <div class="form-group">
+            <label for="taskTime">Due Time:</label>
+            <input type="time" id="taskTime" />
+          </div>
+
+          <div class="form-group">
+            <label for="taskPriority">Priority:</label>
+            <select id="taskPriority">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="taskDescription">Description:</label>
+            <textarea id="taskDescription" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Add Task</button>
+        </form>
+      </div>
+
+      <!-- Task List -->
+      <div id="taskList" class="task-list">
+        <h3>Your Tasks</h3>
+        <div id="tasksContainer">
+          <!-- Tasks will be added here -->
+          <h4 class="toggle-feed-message">Add tasks to the feed</h4>
+        </div>
+      </div>
     </div>
-    </div>
-    <div class="form-area">
-      <form class="form-element" id="task-form" name="add-task-form">
-        <label  for="task-name">
-          Task Name: 
-          <input type="text" id="task-name" required>
-        </label>
-        <br/>
-        <label for="task-due">
-          Due Date (MM-DD-YYYY): 
-          <input type="date" id="task-due" required>
-        </label>
-        <br/>
-        <label for="tasks-due-time">
-          Due Time: 
-          <input type="time" id="task-due-time" >
-        </label>
-        <br/>
-        <label for="task-description">
-          Description: 
-          <textarea name="task-short-comment" form="task-form"></textarea>
-        </label>
-        <br/>
-        <label for="browser">Choose your Priority:</label>
-        <input list="browsers" name="browser" id="browser">
-        <datalist id="browsers">
-          <option value="High">
-          <option value="Medium">
-          <option value="Low">
-          <option value="None">
-        </datalist>
-        <br/>
-        </label>
-        <br/>
-        <label for="submit-btn">
-          <input type="submit" id="submit-btn" value="Add Task" >
-        </label>
-      </form>
-      
-    </div>
-    <!-- add task button -->
+
+    <script src="../src/Tasks.js"></script>
   </body>
-  <script src="/src/Tasks.js"></script>
 </html>
