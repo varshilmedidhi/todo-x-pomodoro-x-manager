@@ -17,3 +17,4 @@ toggleBtn.addEventListener("click", () => {
 
 // toggle the message and stack
 let taskStack = [];
+let ourTaskForm = document.forms["addTaskForm"];

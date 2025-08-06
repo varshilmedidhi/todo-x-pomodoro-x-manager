@@ -24,25 +24,25 @@
       <!-- Task Form -->
       <div id="taskForm" class="task-form">
         <h3>Add New Task</h3>
-        <form id="addTaskForm">
+        <form id="addTaskForm" name="addTaskForm">
           <div class="form-group">
             <label for="taskName">Task Name:</label>
-            <input type="text" id="taskName" required />
+            <input type="text" id="taskName" name="taskName" required />
           </div>
 
           <div class="form-group">
             <label for="taskDate">Due Date:</label>
-            <input type="date" id="taskDate" required />
+            <input type="date" id="taskDate" name="taskDate" required />
           </div>
 
           <div class="form-group">
             <label for="taskTime">Due Time:</label>
-            <input type="time" id="taskTime" />
+            <input type="time" id="taskTime" name="taskTime" required />
           </div>
 
           <div class="form-group">
             <label for="taskPriority">Priority:</label>
-            <select id="taskPriority">
+            <select id="taskPriority" name="taskPriority">
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
@@ -51,11 +51,26 @@
 
           <div class="form-group">
             <label for="taskDescription">Description:</label>
-            <textarea id="taskDescription" rows="4"></textarea>
+            <textarea
+              id="taskDescription"
+              name="taskDescription"
+              rows="4"
+            ></textarea>
           </div>
 
           <button type="submit" class="submit-btn">Add Task</button>
         </form>
+      </div>
+
+      <!--Tasks Filter Bar : this is a bar where users can select multiple categories such as : date , time , priority and then we could get results based on the selected filters -->
+      <div class="filter-bar">
+        <h3>Filter Tasks</h3>
+        <select id="filterOptions" class="filter-select">
+          <option value="all">Priority</option>
+          <option value="Date">Date</option>
+          <option value="Time">Time</option>
+        </select>
+        <button id="add-option" class="add-option-btn">Filter</button>
       </div>
 
       <!-- Task List -->
